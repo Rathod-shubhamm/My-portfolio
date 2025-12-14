@@ -154,7 +154,7 @@ const AnimatedBackground = () => {
     if (!selectedSkill || !splineApp) return;
     splineApp.setVariable("heading", selectedSkill.label);
     splineApp.setVariable("desc", selectedSkill.shortDescription);
-  }, [selectedSkill]);
+  }, [selectedSkill, splineApp]);
 
   // handle keyboard heading and desc visibility
   useEffect(() => {
@@ -491,7 +491,7 @@ const AnimatedBackground = () => {
     const frame1 = splineApp?.findObjectByName("frame-1");
     const frame2 = splineApp?.findObjectByName("frame-2");
     if (!frame1 || !frame2 || !framesParent)
-      return { start: () => {}, stop: () => {} };
+      return { start: () => { }, stop: () => { } };
 
     let interval: NodeJS.Timeout;
     const start = () => {
@@ -517,7 +517,7 @@ const AnimatedBackground = () => {
     return { start, stop };
   };
   const getKeycapsAnimation = () => {
-    if (!splineApp) return { start: () => {}, stop: () => {} };
+    if (!splineApp) return { start: () => { }, stop: () => { } };
 
     let tweens: gsap.core.Tween[] = [];
     const start = () => {

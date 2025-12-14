@@ -768,141 +768,174 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
-    screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github: "https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+  { // 01. Crypto Coin News Tracker
+    id: "cryptocointracker",
+    category: "AI & Automation",
+    title: "Crypto Coin News Tracker",
+    src: "/assets/projects-screenshots/placeholder.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.netlify],
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images.
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile.
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
+            A real-time cryptocurrency news aggregator that tracks market trends, coin prices,
+            and breaking news from multiple sources. Features AI-powered sentiment analysis
+            to help traders make informed decisions based on news impact predictions.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
-            ]}
-          />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>Real-time price tracking for 100+ cryptocurrencies</li>
+            <li>AI-powered news sentiment analysis</li>
+            <li>Custom alerts for price movements and news events</li>
+            <li>Portfolio tracking and performance analytics</li>
+          </ul>
         </div>
       );
     },
   },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
+  { // 02. Social Media Content Automation
+    id: "socialmediaautomation",
+    category: "AI & Automation",
+    title: "Social Media Content Automation",
+    src: "/assets/projects-screenshots/placeholder.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
     },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
-          </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic
-            architecture to a microservice-based architecture to handle increased traffic and
-            scaling challenges. The project involves automating infrastructure provisioning, build
-            and deployment processes, and continuous monitoring using modern DevOps tools and
-            AWS services.?
+            An AI-powered content automation platform that generates, schedules, and posts
+            content across multiple social media platforms. Uses LLMs to create engaging
+            posts tailored to each platform's unique style and audience.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-            Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-            Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-            `${BASE_PATH}/financeme/3.png`,
-            `${BASE_PATH}/financeme/8.png`,
-            `${BASE_PATH}/financeme/9.png`,
-            `${BASE_PATH}/financeme/10.png`,
-          ]} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>AI-generated content for Twitter, LinkedIn, Instagram</li>
+            <li>Smart scheduling based on audience engagement patterns</li>
+            <li>Brand voice customization and consistency</li>
+            <li>Analytics dashboard for performance tracking</li>
+          </ul>
         </div>
       );
     },
   },
-  { // 03. Portfolio project
+  { // 03. Encrypted File Sharing System
+    id: "encryptedfilesharing",
+    category: "Security & Privacy",
+    title: "Encrypted File Sharing System",
+    src: "/assets/projects-screenshots/placeholder.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.mongo],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A secure file sharing platform with end-to-end encryption. Files are encrypted
+            client-side before upload, ensuring complete privacy. Features self-destructing
+            links, password protection, and detailed access logs.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>End-to-end AES-256 encryption</li>
+            <li>Self-destructing links with custom expiration</li>
+            <li>Password-protected file access</li>
+            <li>Detailed access logs and audit trails</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  { // 04. AI Powered Analytical Dashboard Generator
+    id: "aidashboardgenerator",
+    category: "AI & Data Analytics",
+    title: "AI-Powered Dashboard Generator",
+    src: "/assets/projects-screenshots/placeholder.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.postgres],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            An AI-powered tool that automatically generates analytical dashboards from raw data.
+            Simply upload your dataset or connect your database, and the AI analyzes your data
+            to create meaningful visualizations and insights automatically.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>Auto-detection of data patterns and relationships</li>
+            <li>AI-suggested visualizations based on data type</li>
+            <li>Natural language querying of your data</li>
+            <li>Export dashboards as PDF or embed in websites</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  { // 05. AI Course Generator
+    id: "aicoursegenerator",
+    category: "AI & Education",
+    title: "AI Course Generator",
+    src: "/assets/projects-screenshots/placeholder.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            An AI-powered platform that automatically generates comprehensive courses on any topic.
+            Uses LLMs to create structured learning paths, lesson content, quizzes, and
+            assignments. Perfect for educators and content creators.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>AI-generated course structure and curriculum</li>
+            <li>Automatic quiz and assessment generation</li>
+            <li>Multi-format content: text, slides, audio</li>
+            <li>Progress tracking and learner analytics</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  { // 06. My Portfolio
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing-new.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing-new.png"],
     live: "https://shubhamrathod.com/",
-    github: "https://github.com/Rathod-shubhamm/3D-interactive-portfolio",
+    github: "https://github.com/Rathod-shubhamm/My-portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -919,41 +952,22 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
+            Welcome to my digital playground! A stunning 3D interactive portfolio
+            showcasing my skills as an AI Context Engineer. Built with Next.js,
+            Spline for 3D, and smooth Framer Motion animations.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
+            Beautiful 3D Objects
           </TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
+            Check out the interactive 3D keyboard! Each keycap represents an AI/ML
+            skill and reveals descriptions on hover. It&apos;s like typing, but make it art.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
-            ]}
-          />
           <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
           <p className="font-mono mb-2">
             Dark background + floating particles = out-of-this-world cool.
           </p>
-          <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
-
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/projects.png`,
-              `${BASE_PATH}/myportfolio/project.png`,
-            ]}
-          />
           <p className="font-mono mb-2 mt-8 text-center">
             This site&apos;s not just a portfolio — it&apos;s a whole vibe.
           </p>
@@ -961,113 +975,6 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github: "https://github.com/Abhiz2411/smart-parking-assistant",
-    skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI
-            that visualizes availability and an intelligent system for quick, optimal decisions.
-            Built to adapt with customizable hardware and Python-powered software for seamless
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github: "https://github.com/Abhiz2411/Job-tracker-application",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you
-            manage, filter, and visualize your job search. Organize your applications with a
-            Kanban board, monitor progress through status updates, and store everything securely.
-            Enjoy seamless access across devices with a responsive design and email reminders for
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github: "https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey,
-            milestones, and life-changing services blending tech and spirituality. Built with
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
 ];
 export default projects;
+

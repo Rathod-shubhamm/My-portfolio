@@ -1,60 +1,43 @@
-![Portfolio Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
+# 🚀 Shubham Rathod - AI Context Engineer Portfolio
 
-# 🚀 My Portfolio Website
+Welcome to my personal portfolio website! 🎉 This project showcases my skills, projects, and journey as an AI Context Engineer through a visually stunning and interactive 3D experience.
 
-Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills, projects, and personality in a visually stunning and interactive manner.
-
-### Live preview: https://www.abhijitzende.com/
-
-![Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/preview_video.gif?raw=true)
-
-https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/preview_video.mp4
-
-This project is **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Naresh! 🙏
+### Live Preview: https://shubhamrathod.com/
 
 ## 🔥 Features
 
-Here are the key highlights of my portfolio:
-
-### 🎹 **3D Interactive Animations**
-- Features a custom-made interactive keyboard built with **Spline**.
-- Each keycap represents a skill and reveals titles and descriptions on hover for an immersive experience.
-- Smooth, responsive 3D interactions that captivate visitors.
+### 🎹 **3D Interactive Skills Keyboard**
+- Custom-made interactive keyboard built with **Spline**
+- Each keycap represents an AI/ML skill with descriptions on hover
+- Smooth, responsive 3D interactions that captivate visitors
 
 ### ✨ **Slick Interactions & Animations**
-- Powered by **GSAP** and **Framer Motion**, delivering buttery-smooth animations on scroll, hover, and element reveals.
-- Creative motion designs that enhance storytelling and keep users engaged.
+- Powered by **GSAP** and **Framer Motion** for buttery-smooth animations
+- Creative motion designs on scroll, hover, and element reveals
 
 ### 🌌 **Space-Themed Design**
-- Particles floating on a dark, cosmic background simulate an outer-space vibe.
-- Adds a unique and futuristic look to the portfolio.
+- Particles floating on a dark, cosmic background
+- Unique and futuristic look
 
-### 📱 **Responsive Design**
-- Fully responsive layout ensures the website looks and functions beautifully on all devices.
-- Optimized for both desktop and mobile experiences.
-
-### 🧠 **Innovative Web Design**
-- Combines cutting-edge technology with an intuitive user experience.
-- Creative use of animations and visuals to push the boundaries of modern web design.
+### 📱 **Fully Responsive**
+- Beautiful on all devices - desktop, tablet, and mobile
 
 ## 🛠️ Tech Stack
 
-The portfolio website is built using the following tools and technologies:
-
-- **Frontend:** Next.js, React, Tailwind CSS, Shadcn, Aceternity UI
+- **Frontend:** Next.js, React, TypeScript, Tailwind CSS, Shadcn UI, Aceternity UI
 - **Animations:** GSAP, Framer Motion, Spline Runtime
-- **Other Tools:** Resend, Socket.io, Zod
+- **Other Tools:** Resend (email), Zod (validation)
 
-## 🌟 Getting Started
+## 🚀 Getting Started
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Abhiz2411/3D-interactive-portfolio.git
+   git clone https://github.com/Rathod-shubhamm/My-portfolio.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd 3D-interactive-portfolio
+   cd My-portfolio
    ```
 
 3. Install dependencies:
@@ -64,7 +47,7 @@ The portfolio website is built using the following tools and technologies:
 
 4. Set up environment variables:
    ```bash
-   # Create a .env.local file in the root directory
+   # Create a .env.local file
    touch .env.local
 
    # Add your Resend API key
@@ -83,30 +66,22 @@ The portfolio website is built using the following tools and technologies:
 
 ## 🚀 Deployment
 
-This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://www.abhijitzende.com/).
+Deployed on **Vercel** for blazing-fast performance.
 
 ### Setting up Resend API on Vercel
 
-1. Sign up for a [Resend](https://resend.com) account and get your API key
-2. Go to your Vercel project settings
-3. Navigate to the "Environment Variables" section
-4. Add a new environment variable:
-   - Name: `RESEND_API_KEY`
-   - Value: Your Resend API key
-5. Save the changes and redeploy your application
+1. Sign up for a [Resend](https://resend.com) account
+2. Go to your Vercel project settings → Environment Variables
+3. Add `RESEND_API_KEY` with your Resend API key
+4. Redeploy your application
 
-Note: Make sure to keep your API key secret and never commit it to your repository.
+##  Contact
 
-## 💖 Acknowledgments
+Feel free to reach out!
 
-A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.
-
-## 📬 Contact
-
-Feel free to reach out to me for collaboration, feedback, or just to say hi! 😊
-
-- **Email:** abhijitzende75@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/zende-abhijit/)
+- **Email:** shubhamrathod1619@gmail.com
+- **LinkedIn:** [Shubham Rathod](https://www.linkedin.com/in/shubham-rathod-821a01202)
+- **GitHub:** [Rathod-shubhamm](https://github.com/Rathod-shubhamm)
 
 ---
 

@@ -768,43 +768,11 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. Crypto Coin News Tracker
-    id: "cryptocointracker",
-    category: "AI & Automation",
-    title: "Crypto Coin News Tracker",
-    src: "/assets/projects-screenshots/placeholder.png",
-    screenshots: ["placeholder.png"],
-    live: "#",
-    github: "https://github.com/Rathod-shubhamm",
-    skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
-      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A real-time cryptocurrency news aggregator that tracks market trends, coin prices,
-            and breaking news from multiple sources. Features AI-powered sentiment analysis
-            to help traders make informed decisions based on news impact predictions.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
-          <ul className="list-disc ml-6 font-mono">
-            <li>Real-time price tracking for 100+ cryptocurrencies</li>
-            <li>AI-powered news sentiment analysis</li>
-            <li>Custom alerts for price movements and news events</li>
-            <li>Portfolio tracking and performance analytics</li>
-          </ul>
-        </div>
-      );
-    },
-  },
-  { // 02. Social Media Content Automation
+  { // 01. Social Media Content Automation
     id: "socialmediaautomation",
     category: "AI & Automation",
     title: "Social Media Content Automation",
-    src: "/assets/projects-screenshots/placeholder.png",
+    src: "/assets/projects-screenshots/Gemini_Generated_Image_x7q8w0x7q8w0x7q8.png",
     screenshots: ["placeholder.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
@@ -832,75 +800,59 @@ const projects: Project[] = [
       );
     },
   },
-  { // 03. Encrypted File Sharing System
-    id: "encryptedfilesharing",
-    category: "Security & Privacy",
-    title: "Encrypted File Sharing System",
-    src: "/assets/projects-screenshots/placeholder.png",
+  { // 02. Football Player Performance Prediction
+    id: "footballplayerprediction",
+    category: "AI & Sports Analytics",
+    title: "Football Player Performance Prediction",
+    src: "/assets/projects-screenshots/Screenshot 2025-12-15 at 11.17.42 PM.png",
     screenshots: ["placeholder.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
-      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.mongo],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.postgres, PROJECT_SKILLS.node],
     },
     get content() {
       return (
         <div>
+          <div className="w-full mb-8 rounded-lg overflow-hidden">
+            <video
+              className="w-full h-auto rounded-lg"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source
+                src="/assets/projects-screenshots/football-player-prediction-video.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <TypographyP className="font-mono ">
-            A secure file sharing platform with end-to-end encryption. Files are encrypted
-            client-side before upload, ensuring complete privacy. Features self-destructing
-            links, password protection, and detailed access logs.
+            A machine learning platform that predicts football player performance using historical
+            data, match statistics, and advanced analytics. Helps coaches and scouts make data-driven
+            decisions about player selection, training, and tactical planning.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
           <ul className="list-disc ml-6 font-mono">
-            <li>End-to-end AES-256 encryption</li>
-            <li>Self-destructing links with custom expiration</li>
-            <li>Password-protected file access</li>
-            <li>Detailed access logs and audit trails</li>
+            <li>ML-based performance prediction models</li>
+            <li>Historical data analysis and trend identification</li>
+            <li>Injury risk assessment and player fitness monitoring</li>
+            <li>Interactive dashboards for performance visualization</li>
           </ul>
         </div>
       );
     },
   },
-  { // 04. AI Powered Analytical Dashboard Generator
-    id: "aidashboardgenerator",
-    category: "AI & Data Analytics",
-    title: "AI-Powered Dashboard Generator",
-    src: "/assets/projects-screenshots/placeholder.png",
-    screenshots: ["placeholder.png"],
-    live: "#",
-    github: "https://github.com/Rathod-shubhamm",
-    skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
-      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.postgres],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            An AI-powered tool that automatically generates analytical dashboards from raw data.
-            Simply upload your dataset or connect your database, and the AI analyzes your data
-            to create meaningful visualizations and insights automatically.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
-          <ul className="list-disc ml-6 font-mono">
-            <li>Auto-detection of data patterns and relationships</li>
-            <li>AI-suggested visualizations based on data type</li>
-            <li>Natural language querying of your data</li>
-            <li>Export dashboards as PDF or embed in websites</li>
-          </ul>
-        </div>
-      );
-    },
-  },
-  { // 05. AI Course Generator
-    id: "aicoursegenerator",
-    category: "AI & Education",
-    title: "AI Course Generator",
-    src: "/assets/projects-screenshots/placeholder.png",
+  { // 03. Crypto News Aggregation Platform
+    id: "cryptonewsaggregation",
+    category: "AI & Automation",
+    title: "Crypto News Aggregation Platform",
+    src: "/assets/projects-screenshots/Gemini_Generated_Image_1xdny61xdny61xdn.png",
     screenshots: ["placeholder.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
@@ -912,26 +864,93 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            An AI-powered platform that automatically generates comprehensive courses on any topic.
-            Uses LLMs to create structured learning paths, lesson content, quizzes, and
-            assignments. Perfect for educators and content creators.
+            A comprehensive cryptocurrency news aggregation platform that collects and organizes
+            news from multiple sources. Features AI-powered sentiment analysis, real-time price
+            tracking, and personalized news feeds to help traders stay informed.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
           <ul className="list-disc ml-6 font-mono">
-            <li>AI-generated course structure and curriculum</li>
-            <li>Automatic quiz and assessment generation</li>
-            <li>Multi-format content: text, slides, audio</li>
-            <li>Progress tracking and learner analytics</li>
+            <li>Real-time news aggregation from multiple sources</li>
+            <li>AI-powered sentiment analysis and news categorization</li>
+            <li>Price tracking and market trend visualization</li>
+            <li>Customizable news feeds and alerts</li>
           </ul>
         </div>
       );
     },
   },
-  { // 06. My Portfolio
+  { // 04. Trans-User Encrypted File Sharing System
+    id: "transuserencryptedfilesharing",
+    category: "Security & Privacy",
+    title: "Trans-User Encrypted File Sharing System",
+    src: "/assets/projects-screenshots/Gemini_Generated_Image_tngj9ntngj9ntngj.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.mongo],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A secure peer-to-peer file sharing system with end-to-end encryption designed for
+            cross-user file transfers. Files are encrypted client-side before transmission,
+            ensuring complete privacy and security. Features self-destructing links, password
+            protection, and detailed access logs.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>End-to-end AES-256 encryption for secure transfers</li>
+            <li>Self-destructing links with custom expiration times</li>
+            <li>Password-protected file access</li>
+            <li>Cross-user sharing with detailed access logs and audit trails</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  { // 05. End to End E-Course Generation
+    id: "endtoendecoursegeneration",
+    category: "AI & Education",
+    title: "End to End E-Course Generation",
+    src: "/assets/projects-screenshots/Gemini_Generated_Image_bzebv4bzebv4bzeb.png",
+    screenshots: ["placeholder.png"],
+    live: "#",
+    github: "https://github.com/Rathod-shubhamm",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.node],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            An AI-powered platform that generates complete e-courses from start to finish. 
+            From curriculum design to content creation, video scripts, quizzes, and assessments,
+            this platform automates the entire course creation workflow using advanced LLMs
+            and machine learning algorithms.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono">
+            <li>Automated curriculum and course structure generation</li>
+            <li>AI-generated course content, lessons, and materials</li>
+            <li>Interactive quiz and assessment creation</li>
+            <li>Video script generation and multimedia content support</li>
+            <li>Progress tracking and learner analytics dashboard</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  { // 06. Personal Portfolio
     id: "portfolio",
     category: "Portfolio",
-    title: "My Portfolio",
+    title: "Personal Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing-new.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing-new.png"],
     live: "https://shubhamrathod.com/",

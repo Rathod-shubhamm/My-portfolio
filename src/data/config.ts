@@ -22,7 +22,7 @@ const config = {
     "AIOps",
     "Azure",
   ],
-  author: "Shubhan Rathod",
+  author: "Shubham Rathod",
   email: "shubhamrathod1619@gmail.com",
   site: "https://shubhamrathod.com",
 

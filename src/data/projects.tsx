@@ -786,7 +786,7 @@ const projects: Project[] = [
           <TypographyP className="font-mono ">
             An AI-powered content automation platform that generates, schedules, and posts
             content across multiple social media platforms. Uses LLMs to create engaging
-            posts tailored to each platform's unique style and audience.
+            posts tailored to each platform&apos;s unique style and audience.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
@@ -929,7 +929,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            An AI-powered platform that generates complete e-courses from start to finish. 
+            An AI-powered platform that generates complete e-courses from start to finish.
             From curriculum design to content creation, video scripts, quizzes, and assessments,
             this platform automates the entire course creation workflow using advanced LLMs
             and machine learning algorithms.

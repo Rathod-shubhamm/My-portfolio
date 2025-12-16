@@ -1,8 +1,8 @@
 # 🚀 Shubham Rathod - AI Engineer Portfolio
 
-Welcome to my personal portfolio website! 🎉 This project showcases my skills, projects, and journey as an AI Context Engineer through a visually stunning and interactive 3D experience.
+Welcome to my personal portfolio website! 🎉 This project showcases my skills, projects, and journey as an AI  Engineer through a visually stunning and interactive 3D experience.
 
-### Live Preview: https://shubhamrathod.com/
+
 
 ## 🔥 Features
 

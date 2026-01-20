@@ -41,7 +41,7 @@ const Modall = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-transparent w-full flex justify-center group/modal-btn">
           <div
             className="relative w-full max-w-[400px] h-auto rounded-lg overflow-hidden"
             style={{ aspectRatio: "3/2" }}

@@ -310,7 +310,7 @@ const projects: Project[] = [
     category: "AI & Automation",
     title: "Social Media Content Automation",
     src: "/assets/projects-screenshots/Gemini_Generated_Image_x7q8w0x7q8w0x7q8.png",
-    screenshots: ["placeholder.png"],
+    screenshots: ["/assets/projects-screenshots/Gemini_Generated_Image_x7q8w0x7q8w0x7q8.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
@@ -342,7 +342,7 @@ const projects: Project[] = [
     category: "AI & Sports Analytics",
     title: "Football Player Performance Prediction",
     src: "/assets/projects-screenshots/Screenshot 2025-12-15 at 11.17.42 PM.png",
-    screenshots: ["placeholder.png"],
+    screenshots: ["/assets/projects-screenshots/Screenshot 2025-12-15 at 11.17.42 PM.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
@@ -390,7 +390,7 @@ const projects: Project[] = [
     category: "AI & Automation",
     title: "Crypto News Aggregation Platform",
     src: "/assets/projects-screenshots/Gemini_Generated_Image_1xdny61xdny61xdn.png",
-    screenshots: ["placeholder.png"],
+    screenshots: ["/assets/projects-screenshots/Gemini_Generated_Image_1xdny61xdny61xdn.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
@@ -422,7 +422,7 @@ const projects: Project[] = [
     category: "Security & Privacy",
     title: "Trans-User Encrypted File Sharing System",
     src: "/assets/projects-screenshots/Gemini_Generated_Image_tngj9ntngj9ntngj.png",
-    screenshots: ["placeholder.png"],
+    screenshots: ["/assets/projects-screenshots/Gemini_Generated_Image_tngj9ntngj9ntngj.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
@@ -455,7 +455,7 @@ const projects: Project[] = [
     category: "AI & Education",
     title: "End to End E-Course Generation",
     src: "/assets/projects-screenshots/Gemini_Generated_Image_bzebv4bzebv4bzeb.png",
-    screenshots: ["placeholder.png"],
+    screenshots: ["/assets/projects-screenshots/Gemini_Generated_Image_bzebv4bzebv4bzeb.png"],
     live: "#",
     github: "https://github.com/Rathod-shubhamm",
     skills: {
@@ -489,7 +489,7 @@ const projects: Project[] = [
     category: "Portfolio",
     title: "Personal Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing-new.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing-new.png"],
+    screenshots: ["/assets/projects-screenshots/myportfolio/landing-new.png"],
     live: "https://shubhamrathod.com/",
     github: "https://github.com/Rathod-shubhamm/My-portfolio",
     skills: {

@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState, useCallback } from "react";
 import { Application, SPEObject, SplineEvent } from "@splinetool/runtime";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,6 +13,14 @@ import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Reduce GSAP ticker frequency on mobile for better performance
+if (typeof window !== "undefined") {
+  const isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
+  if (isMobileDevice) {
+    gsap.ticker.fps(30); // Reduce from 60fps to 30fps on mobile
+  }
+}
+
 const STATES = {
   hero: {
     desktop: {
@@ -21,8 +29,8 @@ const STATES = {
       rotation: { x: 0, y: 0, z: 0 },
     },
     mobile: {
-      scale: { x: 0.15, y: 0.15, z: 0.15 },
-      position: { x: 0, y: -200, z: 0 },
+      scale: { x: 0.12, y: 0.12, z: 0.12 },
+      position: { x: 0, y: 100, z: 0 },
       rotation: { x: 0, y: 0, z: 0 },
     },
   },
@@ -37,11 +45,11 @@ const STATES = {
       },
     },
     mobile: {
-      scale: { x: 0.2, y: 0.2, z: 0.2 },
-      position: { x: 0, y: -40, z: 0 },
+      scale: { x: 0.15, y: 0.15, z: 0.15 },
+      position: { x: 0, y: 80, z: 0 },
       rotation: {
         x: 0,
-        y: Math.PI / 6,
+        y: Math.PI / 8,
         z: 0,
       },
     },
@@ -57,11 +65,11 @@ const STATES = {
       },
     },
     mobile: {
-      scale: { x: 0.2, y: 0.2, z: 0.2 },
-      position: { x: 0, y: -40, z: 0 },
+      scale: { x: 0.15, y: 0.15, z: 0.15 },
+      position: { x: 0, y: 80, z: 0 },
       rotation: {
         x: 0,
-        y: Math.PI / 6,
+        y: Math.PI / 8,
         z: 0,
       },
     },
@@ -77,8 +85,8 @@ const STATES = {
       },
     },
     mobile: {
-      scale: { x: 0.18, y: 0.18, z: 0.18 },
-      position: { x: 0, y: 150, z: 0 },
+      scale: { x: 0.12, y: 0.12, z: 0.12 },
+      position: { x: 0, y: 200, z: 0 },
       rotation: {
         x: Math.PI,
         y: Math.PI / 3,
@@ -97,8 +105,8 @@ const STATES = {
       },
     },
     mobile: {
-      scale: { x: 0.18, y: 0.18, z: 0.18 },
-      position: { x: 0, y: 150, z: 0 },
+      scale: { x: 0.12, y: 0.12, z: 0.12 },
+      position: { x: 0, y: 200, z: 0 },
       rotation: {
         x: Math.PI,
         y: Math.PI / 3,
@@ -117,6 +125,9 @@ const AnimatedBackground = () => {
   const splineContainer = useRef<HTMLDivElement>(null);
   const [splineApp, setSplineApp] = useState<Application>();
 
+  // Defer Spline loading on mobile for faster initial page load
+  const [shouldLoadSpline, setShouldLoadSpline] = useState(!isMobile);
+
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [activeSection, setActiveSection] = useState<Section>("hero");
   const [bongoAnimation, setBongoAnimation] = useState<{
@@ -127,6 +138,26 @@ const AnimatedBackground = () => {
     start: () => void;
     stop: () => void;
   }>();
+
+  // Defer Spline loading on mobile - load after 1.5s or on scroll
+  useEffect(() => {
+    if (isMobile && !shouldLoadSpline) {
+      const timer = setTimeout(() => {
+        setShouldLoadSpline(true);
+      }, 1500);
+
+      const handleScroll = () => {
+        setShouldLoadSpline(true);
+        window.removeEventListener("scroll", handleScroll);
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [isMobile, shouldLoadSpline]);
 
   const keyboardStates = (section: Section) => {
     return STATES[section][isMobile ? "mobile" : "desktop"];
@@ -559,12 +590,56 @@ const AnimatedBackground = () => {
     };
     return { start, stop };
   };
+  // Optimize Spline scene on load (disable shadows, reduce quality on mobile)
+  const optimizeSplineScene = (app: Application) => {
+    try {
+      // Disable shadows for better performance
+      const allObjects = app.getAllObjects();
+      allObjects.forEach((obj) => {
+        // Use type assertion for Three.js properties not in SPEObject type
+        const obj3d = obj as unknown as { castShadow?: boolean; receiveShadow?: boolean };
+        if ('castShadow' in obj) obj3d.castShadow = false;
+        if ('receiveShadow' in obj) obj3d.receiveShadow = false;
+      });
+
+      // On mobile, try to reduce render quality
+      if (isMobile && app.setVariable) {
+        // Lower quality settings if available
+        try {
+          app.setVariable("quality", "low");
+        } catch (e) {
+          // Variable might not exist
+        }
+      }
+    } catch (e) {
+      console.log("Spline optimization skipped:", e);
+    }
+  };
+
+  // Show loading placeholder while Spline is deferred on mobile
+  if (!shouldLoadSpline) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-zinc-700 border-t-zinc-400 rounded-full animate-spin" />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="relative">
+            <div className="w-16 h-16 border-4 border-zinc-700 border-t-zinc-400 rounded-full animate-spin" />
+          </div>
+        </div>
+      }>
         <Spline
           ref={splineContainer}
           onLoad={(app: Application) => {
+            optimizeSplineScene(app);
             setSplineApp(app);
             bypassLoading();
           }}

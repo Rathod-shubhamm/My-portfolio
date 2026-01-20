@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactLenis, useLenis } from "@/lib/lenis";
 
 interface LenisProps {
@@ -9,6 +9,13 @@ interface LenisProps {
 }
 
 function SmoothScroll({ children, isInsideModal = false }: LenisProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if mobile on mount
+    setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+  }, []);
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
@@ -19,6 +26,11 @@ function SmoothScroll({ children, isInsideModal = false }: LenisProps) {
       lenis?.start();
     });
   }, []);
+
+  // Disable smooth scroll on mobile for better performance
+  if (isMobile) {
+    return <>{children}</>;
+  }
 
   return (
     <ReactLenis

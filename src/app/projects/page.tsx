@@ -81,10 +81,10 @@ function Page() {
     <>
       <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
         <h1 className="text-4xl mt-[100px] mb-[50px]">Projects</h1>
-        <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around ">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 px-4 md:px-0">
           {PROJECTS.map((project) => (
             <li
-              className="w-[300px] h-[400px] border-[.5px] rounded-md border-zinc-600"
+              className="w-full max-w-[300px] mx-auto sm:mx-0 sm:max-w-none h-auto min-h-[350px] sm:h-[400px] border-[.5px] rounded-md border-zinc-600"
               key={project.id}
               style={{ backdropFilter: "blur(2px)" }}
             >
@@ -107,7 +107,7 @@ function Page() {
                       <Image
                         src={image}
                         alt={`screenshot of "${project.name}`}
-                        className="w-[300px] h-[200px] rounded-md bg-zinc-900 "
+                        className="w-full h-[200px] rounded-md bg-zinc-900 object-cover"
                         width={300}
                         height={400}
                         style={{ height: "200px" }}

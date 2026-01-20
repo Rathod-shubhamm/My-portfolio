@@ -279,9 +279,9 @@ function Page() {
             </div>
           </div>
         </aside>
-        <main className="basis-3/4 w-[500px]">
+        <main className="basis-3/4 w-full">
           <div
-            className="p-10 border-[.5px] rounded-md border-zinc-600"
+            className="p-4 sm:p-6 md:p-10 border-[.5px] rounded-md border-zinc-600"
             style={{ backdropFilter: "blur(2px)" }}
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
@@ -313,6 +313,10 @@ function Page() {
                     rewind: true,
                     easing: "cubic-bezier(0.25, 1, 0.5, 1)",
                     arrows: false,
+                    breakpoints: {
+                      640: { perPage: 3 },
+                      480: { perPage: 2 },
+                    },
                   }}
                   aria-label="My Favorite Images"
                 >
